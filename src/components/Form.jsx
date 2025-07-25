@@ -47,7 +47,7 @@ const Form = () => {
             return;
         }
         try {
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/send-otp`, {
+            const res = await fetch(`https://classifyapp.onrender.com/api/send-otp`, {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({ email: formData.email })
@@ -86,7 +86,7 @@ const Form = () => {
         }
 
         try {
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/verify-otp`, {
+            const res = await fetch(`https://classifyapp.onrender.com/api/verify-otp`, {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 body: JSON.stringify({ email: formData.email, otp: enteredOtp })
@@ -121,7 +121,7 @@ const Form = () => {
         }
 
         try {
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/register`, {
+            const res = await fetch(`https://classifyapp.onrender.com/api/register`, {
 
                 method: "POST",
                 headers: { "content-type": "application/json" },
