@@ -29,6 +29,7 @@ const Profile = () => {
       .catch((err) => {
         alert(err.message);
       });
+    fetchProfile();
   }, []);
 
   if (!profile) return <div>Loading profile...</div>;
