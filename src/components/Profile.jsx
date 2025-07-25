@@ -6,32 +6,34 @@ const Profile = () => {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    const fetchData = async() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      alert("Please login first");
-      return;
-    }
-  
-   const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/profile`, {
-      method: "GET",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Unauthorized or error fetching profile");
-        return res.json();
+    const fetchData = async () => {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("Please login first");
+        return;
+      }
+
+      fetch(`${import.meta.env.VITE_BACKEND_URL}/api/profile`, {
+        method: "GET",
+        headers: {
+          "Authorization": `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
       })
-      .then((data) => {
-        setProfile(data);
-      })
-      .catch((err) => {
-        alert(err.message);
-      });
-    fetchData();
-  }, []);
+        .then((res) => {
+          if (!res.ok) throw new Error("Unauthorized or error fetching profile");
+          return res.json();
+        })
+        .then((data) => {
+          setProfile(data);
+        })
+        .catch((err) => {
+          alert(err.message);
+        });
+    };
+
+    fetchData(); 
+  }, []); 
 
   if (!profile) return <div>Loading profile...</div>;
 
@@ -43,6 +45,5 @@ const Profile = () => {
     </div>
   );
 };
-
 
 export default Profile;
