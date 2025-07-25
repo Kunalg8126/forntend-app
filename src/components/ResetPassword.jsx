@@ -17,7 +17,7 @@ function ResetPassword() {
         e.preventDefault();
 
         try {
-            const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/reset-password/${token}`, {
+            const res = await fetch(`https://classifyapp.onrender.com/api/reset-password/${token}`, {
                 method: 'POST',
                 headers: { "Content-Type": 'application/json' },
                 body: JSON.stringify({ password: newPassword })
