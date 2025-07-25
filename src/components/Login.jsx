@@ -15,7 +15,7 @@ const Login = () => {
         
        
         try {
-            const res = await fetchfetch(`https://classifyapp.onrender.com/api/login`, {
+            const res = await fetchfetch(`${import.meta.env.VITE_BACKEND_URL}/api/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
