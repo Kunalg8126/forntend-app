@@ -6,6 +6,7 @@ function ResetPassword() {
 
 
     const { token } = useParams();
+    const navigate = useNavigate();
     const [newPassword, setNewPassword] = useState('');
     const [message, setMessage] = useState('');
 
@@ -27,6 +28,9 @@ function ResetPassword() {
 
             if (res.ok) {
                 setMessage("Password reset successful !");
+                setTimeout(() =>{
+                    navigate("/login");
+                }, 2000);
             } else {
                 setMessage(data.error || "Reset failed")
             }
