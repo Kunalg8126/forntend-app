@@ -6,6 +6,7 @@ const Profile = () => {
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
+    const fetchData = async() => {
     const token = localStorage.getItem("token");
     if (!token) {
       alert("Please login first");
