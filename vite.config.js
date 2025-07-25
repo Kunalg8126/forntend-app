@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// 👇 base path fix for Vercel routing
 export default defineConfig({
   plugins: [react()],
   build: {
