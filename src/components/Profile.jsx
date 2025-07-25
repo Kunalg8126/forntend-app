@@ -12,7 +12,7 @@ const Profile = () => {
       return;
     }
   
-    fetch(`https://classifyapp.onrender.com/api/profile`, {
+   const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/profile`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${token}`,
