@@ -30,7 +30,7 @@ const Profile = () => {
       .catch((err) => {
         alert(err.message);
       });
-    fetchProfile();
+    fetchData();
   }, []);
 
   if (!profile) return <div>Loading profile...</div>;
