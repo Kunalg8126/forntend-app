@@ -47,7 +47,7 @@ const Form = () => {
             return;
         }
         try {
-            const res = await fetch(`https://classifyapp.onrender.com/api/send-otp`, {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/send-otp`, {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify({ email: formData.email })
