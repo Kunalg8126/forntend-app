@@ -15,6 +15,6 @@ export default defineConfig({
       '@': '/src'
     }
   },
-  // 👇 This is most important for 404 issue
+  // 
   base: './'
 })
