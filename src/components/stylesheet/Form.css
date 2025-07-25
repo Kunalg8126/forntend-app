@@ -1,0 +1,92 @@
+/* Container form styling */
+form {
+  background: hwb(264 80% 6%);
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 40px 35px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* Label styling */
+label {
+  display: block;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="code"] {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #985f5fa4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  outline: none;
+  background: #e7e2e2;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Focus effect for inputs */
+input:focus {
+  border-color: #6a82fb;
+  box-shadow: 0 0 8px rgba(106, 130, 251, 0.5);
+  background: #fff;
+}
+
+/* Smooth placeholder color */
+input::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+
+/* Submit button styling */
+button {
+  width: 100%;
+  padding: 16px 0;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(252, 92, 125, 0.45);
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #fc5c7d, #6a82fb);
+  box-shadow: 0 12px 30px rgba(106, 130, 251, 0.65);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  form {
+    padding: 30px 20px;
+    margin: 30px auto;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 14px 0;
+  }
+}

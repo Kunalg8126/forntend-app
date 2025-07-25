@@ -1,0 +1,39 @@
+/* Body or parent container ke liye background color */
+body, html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(90deg, #5791ae 0%, #718fbd 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Profile container styling with your gradient */
+.profile-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #a8edea 0%, #224e4f 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  color: #084c50; /* dark teal */
+  text-align: center;
+  position: relative;
+}
+
+/* Headings */
+.profile-container h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+/* Paragraph text */
+.profile-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222424; /* slightly lighter teal */
+}
+
+.profile-container p:last-child {
+  margin-bottom: 0;
+}
