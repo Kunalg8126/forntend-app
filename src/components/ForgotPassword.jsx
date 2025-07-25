@@ -14,7 +14,7 @@ function ForgotPassword() {
         e.preventDefault();
 
         try{
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/forgot-password`, {
+            const res = await fetch(`https://classifyapp.onrender.com/api/forgot-password`, {
                 method: 'POST',
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({email}),
